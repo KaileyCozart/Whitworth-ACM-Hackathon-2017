@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Shopping List</title>
+        <link rel="stylesheet" href="jquery.css"></link> 
+    </head>
+    <body>
+        <h1>Shopping List</h1>
+        <div class="openingMessage">
+            <p>Click new item to add to list, click on existing item to get rid of it</p>
+            <input id="message" type="submit" value="Ok" />
+        </div>
+        <div class="content">
+            <ul>
+                <li id="liOne">Case</li>
+                <li id="liTwo">CPU</li>
+                <li id="liThree">GPU</li>
+                <li id="liFour">Turkey</li>
+            </ul>
+            <div id="newItemButton" class="newItemButton"><button href="#" id="showForm">New Item</button></div>
+            <form id="newItemForm">
+                <input type="text" placeholder="New Item" />
+                <input type="submit" id="addButton" value="Add" />
+            </form>
+        </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <script src="jquery.js"></script>
+    </body> 
+</html>
