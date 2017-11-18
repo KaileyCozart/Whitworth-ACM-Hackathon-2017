@@ -2,13 +2,13 @@
 
 var $div = $('div.openingMessage');
 var $button = $('input#message');
-var $content = $('div.content');
+var $listContent = $('div.listContent');
 
 $(function(){
-    $content.hide();
+    $listContent.hide();
     $button.on('click', function(){
         $div.hide();
-        $content.show();
+        $listContent.show();
     });
 });
 
