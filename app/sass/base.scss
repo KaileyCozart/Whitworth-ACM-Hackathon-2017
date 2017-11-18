@@ -1,0 +1,63 @@
+// Basic SCSS
+body {
+  overflow: hidden;
+  margin-left: 0px;
+}
+
+p {
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+// Class SCSS
+.test-one-component, .test-two-component {
+  width: 100vw;
+  height: 100vh;
+}
+
+.test-one-component {
+  background-color: darkblue;
+}
+
+.test-two-component {
+  background-color: darkred;
+}
+
+.content {
+  color: white;
+  background-color: grey;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentBlue, .contentRed {
+  color: white;
+  width: 50vw;
+  height: 50vh;
+  margin-left: 0px;
+}
+
+.contentBlue {
+  background-color: lightblue;
+}
+
+.contentBlue p, .contentRed p {
+  margin-top: 0px;
+}
+
+.contentRed {
+  background-color: lightcoral;
+}
+
+.button {
+  display: block;
+  margin: 15px 5px 5px 93%;
+}
+
+.rippleEffect {
+  width: 50vw;
+  height: 50vh;
+  margin-left: 25vw;
+}
