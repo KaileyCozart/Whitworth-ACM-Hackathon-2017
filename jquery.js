@@ -55,3 +55,9 @@ $(function(){
     });
     $('li').addClass('defaultItem');
 });
+
+// Print Page Function
+
+function pintPage() {
+    window.print();
+}

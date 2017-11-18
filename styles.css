@@ -52,17 +52,17 @@ button {
     border-radius: 50%;
 }
 
-.addButton {
+.addButton, .newItemButton {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-.addButton:hover {
-    box-shadow: 0 0 4px #fff;
+.addButton:hover, .newItemButton:hover {
+    box-shadow: 0 0 6px #fff;
 }
 
-.addButton:focus {
+.addButton:focus, .newItemButton:focus {
     outline: 0px;
 }
 
@@ -87,6 +87,7 @@ button {
     height: 100%;
     width: 100%;
     background-image: url('Images/Blue2.jpg');
+    background-repeat: no-repeat;
     background-size: 100%;
     padding-top: 50px;
 }
@@ -104,6 +105,8 @@ button {
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 4px #fff;
+    position: relative;
+    z-index: 3;
 }
 
 ul {
@@ -130,4 +133,26 @@ form {
 
 .defaultItem {
     background-color: lightskyblue; 
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 30px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    position: relative;
+    left: 0px;
+    z-index: 2;
+}
+
+.blackDiv {
+    background-color: black;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
 }
