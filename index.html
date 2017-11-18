@@ -9,7 +9,7 @@
         <div class="navbar">
             <em class="navbarThemeText">Black Friday</em>
             <em class="navbarShoppingText">Shopping Planner</em>
-            <a href="thanksgiving.html">
+            <a href="index.html">
             <img class="navbarIcon" src="Images/Arrow3.png" />
             </a>
         </div>
@@ -19,20 +19,21 @@
             <div class="shoppingListDiv">
                 <!--h1>My List</h1-->
                 <div class="openingMessage">
-                    <p>Click new item to add to list, click on existing item to get rid of it</p>
-                    <input id="message" type="submit" value="Ok" />
+                    <p>Click "new item" to add onto you list; 
+                        click on existing items to get rid of them.</p>
+                    <input id="message" type="submit" value="Ok" class="addButton" />
                 </div>
                 <div class="listContent">
                     <ul>
-                        <li id="liOne">Case</li>
-                        <li id="liTwo">CPU</li>
-                        <li id="liThree">GPU</li>
-                        <li id="liFour">Turkey</li>
+                        <li id="liOne"><em class="noOpacity">Case</em></li>
+                        <li id="liTwo"><em class="noOpacity">CPU</em></li>
+                        <li id="liThree"><em class="noOpacity">GPU</em></li>
+                        <li id="liFour"><em class="noOpacity">Turkey</em></li>
                     </ul>
                     <div id="newItemButton" class="newItemButton"><button href="#" id="showForm">New Item</button></div>
                     <form id="newItemForm" autocomplete="on">
-                        <input type="text" placeholder="New Item" />
-                        <input type="submit" id="addButton" value="Add" />
+                        <input type="text" placeholder="New Item" class="inputNewItem" />
+                        <input type="submit" id="addButton" value="Add" class="addButton" />
                     </form>
                 </div>
             </div>

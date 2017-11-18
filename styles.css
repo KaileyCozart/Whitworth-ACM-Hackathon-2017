@@ -1,8 +1,9 @@
 /* General CSS */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: white; 
+    color: rgb(255, 255, 255); 
     margin: 0px;
+    background-color: black
 }
 
 h1 {
@@ -12,8 +13,10 @@ h1 {
 /* Navbar */
 .navbar {
     height: 45px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, .7) !important;
     padding: 15px 15px 0px 15px;
+    position: fixed;
+    width: 100vw;
 }
 
 .navbarThemeText, .navbarShoppingText {
@@ -35,14 +38,51 @@ h1 {
     height: 45px;
     float: right;
     margin-top: -7px;
+    margin-right: 55px;
 }
 
 .navbarIcon:hover {
-	background-color: #fff;
+	box-shadow: 0 0 4px #fff;
 	border-radius: 100%;
 }
 
 /* Content */
+button {
+    height: 70px;
+    border-radius: 50%;
+}
+
+.addButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.addButton:hover {
+    box-shadow: 0 0 4px #fff;
+}
+
+.addButton:focus {
+    outline: 0px;
+}
+
+.inputNewItem {
+    height: 50px;
+    opacity: .9;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.inputNewItem:focus {
+    outline: 0px;
+}
+
+.noOpacity {
+    opacity: 1;
+    font-style: normal;
+    font-weight: bold;
+}
+
 .contentBody {
     height: 100%;
     width: 100%;
@@ -59,7 +99,7 @@ h1 {
 .shoppingListDiv {
     background-color: rgba(0,0,0,0.5);
     width: 50%;
-    margin: 0px auto 50px auto;
+    margin: 80px auto 50px auto;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
@@ -78,9 +118,10 @@ li {
     width: 50%; 
     margin-left: 25%;
     list-style-type: none; 
-    background-color: lightskyblue;
+    background-color: rgba(135, 206, 250, .5) !important; 
     color: black;
     padding-top: 40px;
+    font-weight: bold;
 }
 
 form {
