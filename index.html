@@ -2,6 +2,7 @@
     <head>
         <title>Shopping List</title>
         <link rel="stortcut icon" href="Images/Computer.png" />
+        <link href="printStyles.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="styles.css"></link> 
     </head>
     <body>
@@ -9,8 +10,8 @@
         <div class="navbar">
             <em class="navbarThemeText">Black Friday</em>
             <em class="navbarShoppingText">Shopping Planner</em>
-            <a onclick="pintPage()">
-            <img class="navbarIcon" src="Images/Arrow3.png" />
+            <a class="printPage">
+                <img class="navbarIcon" src="Images/Printer2.png" />
             </a>
         </div>
 
@@ -19,8 +20,8 @@
             <div class="shoppingListDiv">
                 <!--h1>My List</h1-->
                 <div class="openingMessage">
-                    <p>Click "new item" to add onto you list; 
-                        click on existing items to get rid of them.</p>
+                    <p>Click "new item" to add item to list; 
+                        click on existing items to remove them.</p>
                     <input id="message" type="submit" value="Ok" class="addButton" />
                 </div>
                 <div class="listContent">
@@ -46,9 +47,9 @@
         </div>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
     <script src="jquery.js"></script>
 
-
+    
     </body> 
 </html>
