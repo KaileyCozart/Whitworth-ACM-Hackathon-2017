@@ -69,13 +69,13 @@ $(function () {
         var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
         frameDoc.document.open();
         frameDoc.document.write('<html><head><title>BLACK FRIDAY SHOPPING LIST</title>');
-        frameDoc.document.write('</head><body>');
+        frameDoc.document.write('</head><body><div class="printBkgrd">');
         frameDoc.document.write('<h1 class="printH1">My Black Friday Shopping List:</h1>');
         //Link to a sepatate CSS file
         frameDoc.document.write('<link href="printStyles.css" rel="stylesheet" type="text/css" />');
         //Add the list items
         frameDoc.document.write(contents);
-        frameDoc.document.write('</body></html>');
+        frameDoc.document.write('</div></body></html>');
         frameDoc.document.close();
         setTimeout(function () {
             window.frames["frame1"].focus();
@@ -83,8 +83,4 @@ $(function () {
             frame1.remove();
         }, 500);
     });
-});
-
-$(function () {
-    $()
 });

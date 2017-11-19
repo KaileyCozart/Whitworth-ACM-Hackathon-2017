@@ -1,29 +1,30 @@
 <html>
-    <head>
-        <title>Shopping List</title>
-        <link rel="stortcut icon" href="Images/Computer.png" />
-        <link href="printStyles.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="styles.css"></link> 
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="navbar">
-            <em class="navbarThemeText">Black Friday</em>
-            <em class="navbarShoppingText">Shopping Planner</em>
-            <a class="printPage">
-                <img class="navbarIcon" src="Images/Printer2.png" />
-            </a>
-        </div>
-
-        <!-- Content -->
-        <div class="contentBody">
-            <div class="shoppingListDiv">
-                <!--h1>My List</h1-->
-                <div class="openingMessage">
-                    <p>Click "new item" to add item to list; 
-                        click on existing items to remove them.</p>
-                    <input id="message" type="submit" value="Ok" class="addButton" />
-                </div>
+<head>
+    <title>Shopping List</title>
+    <link rel="stortcut icon" href="Images/Computer.png" />
+    <link href="printStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles.css"></link> 
+</head>
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <em class="navbarThemeText">Black Friday</em>
+        <em class="navbarShoppingText">Shopping Planner</em>
+        <a class="printPage">
+            <img class="navbarIcon" src="Images/Printer2.png" />
+        </a>
+    </div>
+    
+    <!-- Content -->
+    <div class="contentBody">
+        <div class="shoppingListDiv">
+            <!--h1>My List</h1-->
+            <div class="openingMessage">
+                <p>Click "new item" to add item to list; 
+                    click on existing items to remove them.</p>
+                <input id="message" type="submit" value="Ok" class="addButton" />
+            </div>
+                
                 <div class="listContent">
                     <ul>
                         <li id="liOne"><em class="noOpacity">Case</em></li>
@@ -37,19 +38,16 @@
                         <input type="submit" id="addButton" value="Add" class="addButton" />
                     </form>
                 </div>
-            </div>
+                
         </div>
+        
+    </div>
 
-        <div class="triangle">
-        </div>
-
-        <div class="blackDiv">
-        </div>
-
+        
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
     <script src="jquery.js"></script>
-
-    
-    </body> 
+        
+        
+</body> 
 </html>
