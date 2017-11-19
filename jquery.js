@@ -143,10 +143,13 @@ $(function () {
         frameDoc.document.write('<link href="printStyles.css" rel="stylesheet" type="text/css" />');
         //Add the list items
         //First List
+        frameDoc.document.write('<h3 class="printH3"></h3>');
         frameDoc.document.write(contentsOne);
         //Second List
+        frameDoc.document.write('<h3 class="printH3"></h3>');
         frameDoc.document.write(contentsTwo);
         //Third List
+        frameDoc.document.write('<h3 class="printH3"></h3>');
         frameDoc.document.write(contentsThree);
         //Close Document
         frameDoc.document.write('</div></body></html>');
