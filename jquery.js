@@ -39,7 +39,7 @@ $(function() {
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
-        $('ul.ulOne li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $('ul.ulOne li:last').after('<li class="defaultItem">' + '<em>' + newText + '</em>' + '</li>');
         $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
@@ -73,7 +73,7 @@ $(function() {
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
-        $('ul.ulTwo li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $('ul.ulTwo li:last').after('<li class="defaultItem">' + '<em>' + newText + '</em>' + '</li>');
         $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
@@ -107,7 +107,7 @@ $(function() {
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
-        $('ul.ulThree li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $('ul.ulThree li:last').after('<li class="defaultItem">' + '<em>' + newText + '</em>' + '</li>');
         $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
@@ -178,3 +178,27 @@ $(function() {
     $("#sortableThree").disableSelection();
 });
 
+// Change Page Theme
+$(function() {
+        $('.navbarDotImgOne').on('click', function(){
+            if ($('.navbarDotImgOne').hasClass('unselectedTheme'))
+            $('.navbarDotImgOne').addClass('selectedTheme');
+            $('.navbarDotImgOne').removeClass('unselectedTheme');
+            $('.navbarDotImgTwo').addClass('unselectedTheme');
+            $('.navbarDotImgTwo').removeClass('selectedTheme');
+            $('.contentBodyNewTheme').addClass('contentBody');
+            $('.contentBody').removeClass('contentBodyNewTheme');
+        });
+});
+
+$(function() {
+        $('.navbarDotImgTwo').on('click', function(){
+            if ($('.navbarDotImgTwo').hasClass('unselectedTheme'))
+            $('.navbarDotImgTwo').addClass('selectedTheme');
+            $('.navbarDotImgTwo').removeClass('unselectedTheme');
+            $('.navbarDotImgOne').addClass('unselectedTheme');
+            $('.navbarDotImgOne').removeClass('selectedTheme');
+            $('.contentBody').addClass('contentBodyNewTheme');
+            $('.contentBodyNewTheme').removeClass('contentBody');
+        });
+});

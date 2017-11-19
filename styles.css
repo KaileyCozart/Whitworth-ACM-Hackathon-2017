@@ -13,9 +13,9 @@ h1 {
 
 /* Navbar */
 .navbar {
-    height: 45px;
+    height: 65px;
     background-color: rgba(0, 0, 0, .7) !important;
-    padding: 15px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
     position: fixed;
     width: 100vw;
 }
@@ -30,8 +30,9 @@ h1 {
 }
 
 .navbarImgOne {
-    height: 40px;
-    margin-top: -5px;
+    height: 44px;
+    padding-bottom: 5px;
+    margin-top: 10px;
 }
 
 .navbarImgTwo {
@@ -49,13 +50,52 @@ h1 {
 .navbarIcon {
     height: 45px;
     float: right;
-    margin-top: -7px;
+    margin-top: 10px;
     margin-right: 55px;
 }
 
 .navbarIcon:hover {
 	box-shadow: 0 0 4px #fff;
 	border-radius: 100%;
+}
+
+/* Navbar Dots and jQuery Classes */
+.navbarImgTwoP1 {
+    padding-bottom: 24px;
+}
+
+.navbarImgTwoP2 {
+    margin-left: -95px;
+    margin-bottom: 7px;
+    height: 18px;
+}
+
+.navbarDotImg {
+    height: 13px;
+    margin-left: 2px;
+    margin-bottom: 7px;
+}
+
+.navbarDotImgTwo {
+    margin-left: 2px;
+}
+
+.selectedTheme {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+}
+
+.contentBodyNewTheme {
+    height: 100%;
+    width: 100%;
+    background-image: url('Images/Blue1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 50px;
+}
+
+.defaultItem {
+    background-color: rgb(137, 207, 250);
 }
 
 /* Content */
@@ -150,8 +190,7 @@ li {
     margin-top: 10px; 
     width: 75%; 
     margin-left: 12.5%;
-    list-style-type: none; 
-    background-color: rgba(135, 206, 250, .5) !important; 
+    list-style-type: none;
     color: black;
     padding-top: 40px;
     font-weight: bold;
@@ -161,12 +200,12 @@ li:hover {
     box-shadow: 0 0 8px #fff;
 }
 
-form {
-    margin-top: 10px;   
+em {
+    color: black !important;
 }
 
-.defaultItem {
-    background-color: rgb(137, 207, 250); 
+form {
+    margin-top: 10px;   
 }
 
 p.instructions {
