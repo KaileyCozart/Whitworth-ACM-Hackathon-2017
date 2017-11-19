@@ -51,12 +51,19 @@ h1 {
 button {
     height: 70px;
     border-radius: 50%;
+    border-width: 0px;
+    font-weight: bold;
+}
+
+.addButton {
+    border-width: 0px;
 }
 
 .addButton, .newItemButton {
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    font-weight: bold;
 }
 
 .addButton:hover, .newItemButton:hover {
@@ -164,3 +171,13 @@ p.instructions {
 ::-webkit-scrollbar { 
     display: block; 
 }
+
+/* Inner Shadow for Lists
+.innerShadow {
+    border: 1px  #CCC solid;
+
+    box-shadow: 
+        inset 0px 11px 8px -10px #CCC,
+        inset 0px -11px 8px -10px #CCC; 
+}
+*/

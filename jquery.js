@@ -6,15 +6,15 @@ var $listContent = $('div.shoppingListDiv');
 $(function(){
     $listContent.hide();
     $button.on('click', function(){
-        $div.hide();
-        $listContent.show();
+        $div.fadeOut(2000);
+        $listContent.delay(2000).fadeIn(2000);
     });
 });
 
 // Fade Out Original Li Tags On Click
 $(function(){
     $('li').on('click', function(){
-        $(this).fadeOut(0);
+        $(this).fadeOut(1500);
     });
     $('li').addClass('defaultItem');
 });
@@ -33,21 +33,21 @@ $(function() {
     
     $('#showFormOne').on('click', function(){
         $newItemButton.hide();
-        $newItemForm.show();
+        $newItemForm.fadeIn(1500);
     });
     
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
         $('ul.ulOne li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
-        $newItemButton.show();
+        $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
-        
+
         $(function(){
             $('li').on('click', function(){
                 // $(this).hide();
-                $(this).fadeOut(0);
+                $(this).fadeOut(1500);
             });
         });
         
@@ -67,14 +67,14 @@ $(function() {
     
     $('#showFormTwo').on('click', function(){
         $newItemButton.hide();
-        $newItemForm.show();
+        $newItemForm.fadeIn(1500);
     });
     
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
         $('ul.ulTwo li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
-        $newItemButton.show();
+        $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
         
@@ -101,14 +101,14 @@ $(function() {
     
     $('#showFormThree').on('click', function(){
         $newItemButton.hide();
-        $newItemForm.show();
+        $newItemForm.fadeIn(1500);
     });
     
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
         $('ul.ulThree li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
-        $newItemButton.show();
+        $newItemButton.fadeIn(1500);
         $newItemForm.hide();
         $textInput.val('');
         
@@ -172,17 +172,17 @@ $(function () {
 });
 
 // Draggable List Items
-$( function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
+$(function() {
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
 });
 
-$( function() {
-    $( "#sortableTwo" ).sortable();
-    $( "#sortableTwo" ).disableSelection();
+$(function() {
+    $("#sortableTwo").sortable();
+    $("#sortableTwo").disableSelection();
 });
 
-$( function() {
-    $( "#sortableThree" ).sortable();
-    $( "#sortableThree" ).disableSelection();
+$(function() {
+    $("#sortableThree").sortable();
+    $("#sortableThree").disableSelection();
 });
