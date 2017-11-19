@@ -179,6 +179,25 @@ button {
     overflow-y: scroll;
 }
 
+@media screen and (max-width: 1150px) {
+    .shoppingListDiv {
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+        overflow: auto
+    }
+    .shoppingListDiv {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .shoppingListDivFirst {
+        margin-top: 70%;
+    }
+}
+
 ul {
     padding-left: 0px; 
 }
