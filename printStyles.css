@@ -18,6 +18,12 @@ em {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.printH2 {
+    text-align: center;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .printBkgrd {
     height: 100%;
     width: 100%;

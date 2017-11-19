@@ -1,8 +1,8 @@
 // Hide and Show Message And List
 
-var $div = $('div.openingMessage');
+var $div = $('div.preShoppingListDiv');
 var $button = $('input#message');
-var $listContent = $('div.listContent');
+var $listContent = $('div.shoppingListDiv');
 
 $(function(){
     $listContent.hide();
@@ -21,18 +21,19 @@ $(function(){
     $('li').addClass('defaultItem');
 });
 
-// Add New Items To List And Fade Out Added Li Tags On Click
+/* Add New Items To List And Fade Out Added Li Tags On Click For Each List */
 
+// List One
 $(function() {
     
-    var $newItemButton = $('#newItemButton');
-    var $newItemForm = $('#newItemForm');
-    var $textInput = $('input:text');
+    var $newItemButton = $('#newItemButtonOne');
+    var $newItemForm = $('#newItemFormOne');
+    var $textInput = $('input.inputNewItemOne:text');
     
     $newItemButton.show();
     $newItemForm.hide();
     
-    $('#showForm').on('click', function(){
+    $('#showFormOne').on('click', function(){
         $newItemButton.hide();
         $newItemForm.show();
     });
@@ -40,7 +41,7 @@ $(function() {
     $newItemForm.on('submit', function(event){
         event.preventDefault();
         var newText = $textInput.val();
-        $('li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $('ul.ulOne li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
         $newItemButton.show();
         $newItemForm.hide();
         $textInput.val('');
@@ -56,11 +57,80 @@ $(function() {
     
 });
 
+// List Two
+$(function() {
+    
+    var $newItemButton = $('#newItemButtonTwo');
+    var $newItemForm = $('#newItemFormTwo');
+    var $textInput = $('input.inputNewItemTwo:text');
+    
+    $newItemButton.show();
+    $newItemForm.hide();
+    
+    $('#showFormTwo').on('click', function(){
+        $newItemButton.hide();
+        $newItemForm.show();
+    });
+    
+    $newItemForm.on('submit', function(event){
+        event.preventDefault();
+        var newText = $textInput.val();
+        $('ul.ulTwo li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $newItemButton.show();
+        $newItemForm.hide();
+        $textInput.val('');
+        
+        $(function(){
+            $('li').on('click', function(){
+                // $(this).hide();
+                $(this).fadeOut(0);
+            });
+        });
+        
+    });
+    
+});
+
+// List Three
+$(function() {
+    
+    var $newItemButton = $('#newItemButtonThree');
+    var $newItemForm = $('#newItemFormThree');
+    var $textInput = $('input.inputNewItemThree:text');
+    
+    $newItemButton.show();
+    $newItemForm.hide();
+    
+    $('#showFormThree').on('click', function(){
+        $newItemButton.hide();
+        $newItemForm.show();
+    });
+    
+    $newItemForm.on('submit', function(event){
+        event.preventDefault();
+        var newText = $textInput.val();
+        $('ul.ulThree li:last').after('<li>' + '<em>' + newText + '</em>' + '</li>');
+        $newItemButton.show();
+        $newItemForm.hide();
+        $textInput.val('');
+        
+        $(function(){
+            $('li').on('click', function(){
+                // $(this).hide();
+                $(this).fadeOut(0);
+            });
+        });
+        
+    });
+    
+});
 
 // Print Page Function
 $(function () {
     $(".printPage").click(function () {
-        var contents = $("ul").html();
+        var contentsOne = $(".ulOne").html();
+        var contentsTwo = $("ul.ulTwo").html();
+        var contentsThree = $("ul.ulThree").html();
         var frame1 = $('<iframe />');
         frame1[0].name = "frame1";
         frame1.css({ "position": "absolute", "top": "-1000000px" });
@@ -74,7 +144,25 @@ $(function () {
         //Link to a sepatate CSS file
         frameDoc.document.write('<link href="printStyles.css" rel="stylesheet" type="text/css" />');
         //Add the list items
-        frameDoc.document.write(contents);
+        //First List
+        var headerOne = $("ul.ulOne li:first").html();
+        frameDoc.document.write('<h2 class="printH2">');
+        frameDoc.document.write(headerOne);
+        frameDoc.document.write('</h2>');
+        frameDoc.document.write(contentsOne);
+        //Second List
+        var headerTwo = $("ul.ulTwo li:first").html();
+        frameDoc.document.write('<h2 class="printH2">');
+        frameDoc.document.write(headerTwo);
+        frameDoc.document.write('</h2>');
+        frameDoc.document.write(contentsTwo);
+        //Third List
+        var headerThree = $("ul.ulThree li:first").html();
+        frameDoc.document.write('<h2 class="printH2">');
+        frameDoc.document.write(headerThree);
+        frameDoc.document.write('</h2>');
+        frameDoc.document.write(contentsThree);
+        //Close Document
         frameDoc.document.write('</div></body></html>');
         frameDoc.document.close();
         setTimeout(function () {
@@ -83,4 +171,20 @@ $(function () {
             frame1.remove();
         }, 500);
     });
+});
+
+// Draggable List Items
+$( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+});
+
+$( function() {
+    $( "#sortableTwo" ).sortable();
+    $( "#sortableTwo" ).disableSelection();
+});
+
+$( function() {
+    $( "#sortableThree" ).sortable();
+    $( "#sortableThree" ).disableSelection();
 });
