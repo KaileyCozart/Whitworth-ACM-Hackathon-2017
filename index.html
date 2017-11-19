@@ -1,14 +1,16 @@
 <html>
+
 <head>
     <title>Shopping List</title>
     <link rel="stortcut icon" href="Images/Computer.png" />
     <link href="printStyles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="styles.css"></link> 
+    <link rel="stylesheet" href="styles.css"></link>
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
-    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
+
 <body>
     <!-- Header -->
     <div class="navbar">
@@ -18,78 +20,77 @@
             <img class="navbarIcon" src="Images/Printer2.png" />
         </a>
     </div>
-    
+
     <!-- Content -->
     <div class="contentBody">
-            <div class="preShoppingListDiv">
+        <div class="preShoppingListDiv">
             <div class="openingMessage">
-                    <p class="instructions">
-                       Click on existing items to remove them.<br />
-                       Drag items into order within each list.<br />
-                       Click "new" to add item to list.<br />
-                    </p>
-                    <input id="message" type="submit" value="Ok" class="addButton" />
-                </div>
+                <p class="instructions">
+                    Click on existing items to remove them.<br /> Drag items into order within each list.<br /> Click "new"
+                    to add item to list.<br />
+                </p>
+                <input id="message" type="submit" value="Ok" class="addButton" />
             </div>
-
-        <div class="shoppingListDiv">
-                
-                <div class="listContent">
-                    <ul id="sortable" class="ulOne">
-                        <li id="liOne"><em class="noOpacity">Case</em></li>
-                        <li id="liTwo"><em class="noOpacity">CPU</em></li>
-                        <li id="liThree"><em class="noOpacity">GPU</em></li>
-                        <li id="liFour"><em class="noOpacity">Turkey</em></li>
-                    </ul>
-                    <div id="newItemButtonOne"><button class="newItemButton newItemButtonOne" href="#" id="showFormOne">New</button></div>
-                    <form id="newItemFormOne" autocomplete="on">
-                        <input type="text" placeholder="New Item" class="inputNewItem inputNewItemOne" />
-                        <input type="submit" id="addButton" value="Add" class="addButton" />
-                    </form>
-                </div>
-                
         </div>
 
-        <div class="shoppingListDiv">
-                    
-                    <div class="listContent">
-                        <ul id="sortableTwo" class="ulTwo">
-                            <li id="liOne"><em class="noOpacity">Case</em></li>
-                            <li id="liTwo"><em class="noOpacity">CPU</em></li>
-                            <li id="liThree"><em class="noOpacity">GPU</em></li>
-                            <li id="liFour"><em class="noOpacity">Turkey</em></li>
-                        </ul>
-                        <div id="newItemButtonTwo"><button class="newItemButton newItemButtonTwo" href="#" id="showFormTwo">New</button></div>
-                        <form id="newItemFormTwo" autocomplete="on">
-                            <input type="text" placeholder="New Item" class="inputNewItem inputNewItemTwo" />
-                            <input type="submit" id="addButton" value="Add" class="addButton" />
-                        </form>
-                    </div>
-                    
+        <div class="shoppingListDiv scrollbarStyle">
+
+            <div class="listContent">
+                <ul id="sortable" class="ulOne">
+                    <li id="liOne"><em class="noOpacity">Case</em></li>
+                    <li id="liTwo"><em class="noOpacity">CPU</em></li>
+                    <li id="liFour"><em class="noOpacity">Turkey</em></li>
+                </ul>
+                <div id="newItemButtonOne"><button class="newItemButton newItemButtonOne" href="#" id="showFormOne">New</button></div>
+                <form id="newItemFormOne" autocomplete="on">
+                    <input type="text" placeholder="New Item" class="inputNewItem inputNewItemOne" />
+                    <input type="submit" id="addButton" value="Add" class="addButton" />
+                </form>
             </div>
 
-            <div class="shoppingListDiv">
-                        
-                        <div class="listContent">
-                            <ul id="sortableThree" class="ulThree">
-                                <li id="liOne"><em class="noOpacity">Case</em></li>
-                                <li id="liTwo"><em class="noOpacity">CPU</em></li>
-                                <li id="liThree"><em class="noOpacity">GPU</em></li>
-                                <li id="liFour"><em class="noOpacity">Turkey</em></li>
-                            </ul>
-                            <div id="newItemButtonThree"><button class="newItemButton newItemButtonThree" href="#" id="showFormThree">New</button></div>
-                            <form id="newItemFormThree" autocomplete="on">
-                                <input type="text" placeholder="New Item" class="inputNewItem inputNewItemThree" />
-                                <input type="submit" id="addButton" value="Add" class="addButton" />
-                            </form>
-                        </div>
-                        
-                </div>
-        
+        </div>
+
+        <div class="shoppingListDiv scrollbarStyle">
+
+            <div class="listContent">
+
+                <ul id="sortableTwo" class="ulTwo">
+                    <li id="liOne"><em class="noOpacity">Case</em></li>
+                    <li id="liTwo"><em class="noOpacity">CPU</em></li>
+                    <li id="liFour"><em class="noOpacity">Turkey</em></li>
+                </ul>
+
+                <div id="newItemButtonTwo"><button class="newItemButton newItemButtonTwo" href="#" id="showFormTwo">New</button></div>
+                <form id="newItemFormTwo" autocomplete="on">
+                    <input type="text" placeholder="New Item" class="inputNewItem inputNewItemTwo" />
+                    <input type="submit" id="addButton" value="Add" class="addButton" />
+                </form>
+            </div>
+        </div>
+
+
+        <div class="shoppingListDiv scrollbarStyle">
+
+            <div class="listContent">
+                <ul id="sortableThree" class="ulThree">
+                    <li id="liOne"><em class="noOpacity">Case</em></li>
+                    <li id="liTwo"><em class="noOpacity">CPU</em></li>
+                    <li id="liFour"><em class="noOpacity">Turkey</em></li>
+                </ul>
+                <div id="newItemButtonThree"><button class="newItemButton newItemButtonThree" href="#" id="showFormThree">New</button></div>
+                <form id="newItemFormThree" autocomplete="on">
+                    <input type="text" placeholder="New Item" class="inputNewItem inputNewItemThree" />
+                    <input type="submit" id="addButton" value="Add" class="addButton" />
+                </form>
+            </div>
+
+        </div>
+
     </div>
 
-        
-        
+
+
     <script src="jquery.js"></script>
-</body> 
+</body>
+
 </html>

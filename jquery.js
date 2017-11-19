@@ -1,5 +1,4 @@
 // Hide and Show Message And List
-
 var $div = $('div.preShoppingListDiv');
 var $button = $('input#message');
 var $listContent = $('div.shoppingListDiv');
@@ -13,7 +12,6 @@ $(function(){
 });
 
 // Fade Out Original Li Tags On Click
-
 $(function(){
     $('li').on('click', function(){
         $(this).fadeOut(0);
