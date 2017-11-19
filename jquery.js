@@ -81,7 +81,7 @@ $(function() {
         $(function(){
             $('li').on('click', function(){
                 // $(this).hide();
-                $(this).fadeOut(0);
+                $(this).fadeOut(1500);
             });
         });
         
@@ -115,7 +115,7 @@ $(function() {
         $(function(){
             $('li').on('click', function(){
                 // $(this).hide();
-                $(this).fadeOut(0);
+                $(this).fadeOut(1500);
             });
         });
         
@@ -143,22 +143,10 @@ $(function () {
         frameDoc.document.write('<link href="printStyles.css" rel="stylesheet" type="text/css" />');
         //Add the list items
         //First List
-        var headerOne = $("ul.ulOne li:first").html();
-        frameDoc.document.write('<h2 class="printH2">');
-        frameDoc.document.write(headerOne);
-        frameDoc.document.write('</h2>');
         frameDoc.document.write(contentsOne);
         //Second List
-        var headerTwo = $("ul.ulTwo li:first").html();
-        frameDoc.document.write('<h2 class="printH2">');
-        frameDoc.document.write(headerTwo);
-        frameDoc.document.write('</h2>');
         frameDoc.document.write(contentsTwo);
         //Third List
-        var headerThree = $("ul.ulThree li:first").html();
-        frameDoc.document.write('<h2 class="printH2">');
-        frameDoc.document.write(headerThree);
-        frameDoc.document.write('</h2>');
         frameDoc.document.write(contentsThree);
         //Close Document
         frameDoc.document.write('</div></body></html>');
